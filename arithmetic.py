@@ -1,49 +1,65 @@
 """Functions for common math operations."""
 
 
-def add(num1, num2):
+def add(num_list): # + ['1', '2' 3 4 5]
     """Return the sum of the two input integers."""
+    sum_list = 0
+    for num in num_list:
+        sum_list += num
+    return sum_list
 
-    return num1 + num2
 
 
-def subtract(num1, num2):
+def subtract(num_list):
     """Return the second number subtracted from the first."""
+    sub_list = num_list[0]
+    for num in num_list[1:]:
+        sub_list -= num
+    return sub_list
 
-    return num1 - num2
 
-
-def multiply(num1, num2):
+def multiply(num_list):
     """Multiply the two inputs together."""
+    mult_list = 1
+    for num in num_list:
+        mult_list *= num
+    return mult_list
 
-    return num1 * num2
 
 
-def divide(num1, num2):
+def divide(num_list):
     """Divide the first input by the second, returning a floating point."""
+    div_list = num_list[0]
+    for num in num_list[1:]:
+        div_list /= num
+    return div_list
 
-    return num1 / num2
 
 
-def square(num1):
+def square(num_list):
     """Return the square of the input."""
+    sq_list = []
+    for num in num_list:
+        sq_list.append(num**2) 
+    return sq_list
 
-    return num1 * num1
 
 
-def cube(num1):
+def cube(num_list): 
     """Return the cube of the input."""
+    cub_list = []
+    for num in num_list:
+        cub_list.append(num**3)
+    return cub_list
 
-    return num1 * num1 * num1
 
-
-def power(num1, num2):
+def power(num_list): 
     """Raise num1 to the power of num and return the value."""
+    pow_list = pow(num_list[0], num_list[1])
+    return pow_list
 
-    return num1 ** num2  # ** = exponent operator
 
+def mod(num_list):
+    return num_list[0] % num_list[1]
 
-def mod(num1, num2):
-    """Return the remainder of num / num2."""
-
-    return num1 % num2
+    
